@@ -1,0 +1,69 @@
+:root {
+  --title: #343c6a;
+  --bg-color: #f5f7fa;
+  --border: #e6eff5;
+  --sidebar-bg: #fff;
+  --sidebar-active: #2d60ff;
+  --sidebar-normal: #b1b1b1;
+  --heading: #343c6a;
+  --light-blue: #718ebf;
+
+  --primary: #feaa09;
+  --primary2: #343c6a;
+  --primary3: #2d60ff;
+  --secondary: #fe5c73;
+
+  --expense: #ff4b4a;
+  --income: #41d4a8;
+
+  --dark-blue-grad: linear-gradient(#123288, #295eec);
+
+  --icon-green: #16dbcc;
+  --icon-green-bg: #dcfaf8;
+  --icon-purple: #396aff;
+  --icon-purple-bg: #e7edff;
+  --icon-orange: #ffbb38;
+  --icon-orange-bg: #fff5d9;
+  --icon-red: #ff82ac;
+  --icon-red-bg: #ffe0eb;
+  --box-text: #232323;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  font-family: "Inter";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-panel {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 20px;
+}
+
+@media (min-width: 992px) {
+  .app {
+    flex-direction: row;
+  }
+
+  .content-container {
+    margin: 0px auto;
+    padding: 25px 40px;
+    width: 1125px;
+  }
+}

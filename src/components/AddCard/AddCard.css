@@ -1,0 +1,44 @@
+.card-form form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+}
+
+.card-form div {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 45%;
+}
+
+.card-form label {
+  margin: 0px 0px 10px 0px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #232323;
+}
+
+.card-form input {
+  color: #718ebf;
+  font-size: 15px;
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px solid #dfeaf2;
+  outline: none;
+}
+
+.card-form input::placeholder {
+  color: #718ebf;
+  font-size: 15px;
+}
+
+.add-card-button {
+  background: #1814f3;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  border-radius: 9px;
+  height: 50px;
+  padding: 15px 40px;
+  cursor: pointer;
+}

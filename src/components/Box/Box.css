@@ -1,0 +1,6 @@
+.box {
+  border-radius: 25px;
+  background-color: white;
+  padding: 25px;
+  flex-grow: 1;
+}

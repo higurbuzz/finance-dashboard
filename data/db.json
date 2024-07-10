@@ -1,0 +1,223 @@
+{
+  "credit-cards": [
+    {
+      "id": 0,
+      "balance": 5756,
+      "cardHolder": "Eddy Cusuma",
+      "validThru": "12/22",
+      "cardNumber": "3778 **** **** 1234",
+      "background": "linear-gradient(120deg, rgba(76,73,237,1) 0%, rgba(10,6,244,1) 100%)",
+      "textColor": "#FFFFFF",
+      "labelColor": "rgba(255, 255, 255, 0.7)",
+      "isColored": true
+    },
+    {
+      "id": 1,
+      "balance": 12312,
+      "cardHolder": "Eddy Cusuma",
+      "validThru": "03/25",
+      "cardNumber": "3611 **** **** 7832"
+    },
+    {
+      "id": 3,
+      "balance": 12542,
+      "cardHolder": "Eddy Cusuma",
+      "validThru": "11/28",
+      "cardNumber": "1323 **** **** 4123",
+      "background": "linear-gradient(120deg, rgba(0,180,81,1) 0%, rgba(0,131,70,1) 100%)",
+      "textColor": "#FFFFFF",
+      "labelColor": "rgba(255, 255, 255, 0.7)",
+      "isColored": true
+    }
+  ],
+
+  "weekly-activity": [
+    { "day": "Sat", "deposit": 500, "withdraw": 300 },
+    { "day": "Sun", "deposit": 400, "withdraw": 200 },
+    { "day": "Mon", "deposit": 300, "withdraw": 100 },
+    { "day": "Tue", "deposit": 200, "withdraw": 0 },
+    { "day": "Wed", "deposit": 100, "withdraw": 0 },
+    { "day": "Thu", "deposit": 0, "withdraw": 0 },
+    { "day": "Fri", "deposit": 0, "withdraw": 0 }
+  ],
+
+  "expense-statistics": [
+    { "category": "Entertainment", "percentage": 30 },
+    { "category": "Investment", "percentage": 20 },
+    { "category": "Bill Expense", "percentage": 15 },
+    { "category": "Others", "percentage": 35 }
+  ],
+
+  "recent-transactions": [
+    {
+      "description": "Deposit Paypal",
+      "date": "25 January 2021",
+      "amount": 2500,
+      "type": "deposit"
+    },
+    {
+      "description": "Deposit from my Card",
+      "date": "28 January 2021",
+      "amount": -850,
+      "type": "withdraw"
+    },
+    {
+      "description": "Jemi Wilson",
+      "date": "21 January 2021",
+      "amount": 5400,
+      "type": "deposit"
+    }
+  ],
+
+  "quick-transfer": [
+    { "name": "Workman", "role": "Designer" },
+    { "name": "Livia Bator", "role": "CEO" },
+    { "name": "Randy Press", "role": "Director" }
+  ],
+
+  "balance-history": [
+    { "month": "Jul", "balance": 0 },
+    { "month": "Aug", "balance": 200 },
+    { "month": "Sep", "balance": 400 },
+    { "month": "Oct", "balance": 600 },
+    { "month": "Nov", "balance": 800 },
+    { "month": "Dec", "balance": 1000 },
+    { "month": "Jan", "balance": 1200 }
+  ],
+
+  "all-transactions": [
+    {
+      "description": "Spotify Subscription",
+      "category": "Shopping",
+      "card": "1234 ****",
+      "date": "28 Jan, 12.30 AM",
+      "amount": -2500,
+      "transactionID": "12548796"
+    },
+    {
+      "description": "Freepik Sales",
+      "category": "Transfer",
+      "card": "1234 ****",
+      "date": "25 Jan, 10.40 PM",
+      "amount": 750,
+      "transactionID": "12548796"
+    },
+    {
+      "description": "Mobile Service",
+      "category": "Service",
+      "card": "1234 ****",
+      "date": "20 Jan, 10.40 PM",
+      "amount": -150,
+      "transactionID": "12548796"
+    },
+    {
+      "description": "Wilson",
+      "category": "Transfer",
+      "card": "1234 ****",
+      "date": "15 Jan, 03.29 PM",
+      "amount": -1050,
+      "transactionID": "12548796"
+    },
+    {
+      "description": "Emilly",
+      "category": "Transfer",
+      "card": "1234 ****",
+      "date": "14 Jan, 10.40 PM",
+      "amount": 840,
+      "transactionID": "12548796"
+    }
+  ],
+
+  "card-settings": {
+    "actions": [
+      "Change Pin Code",
+      "Add to Google Pay",
+      "Withdraw without any card",
+      "Block Card",
+      "Add to Apple Pay",
+      "Add to Apple Store"
+    ]
+  },
+
+  "loans": [
+    {
+      "amount": 100000,
+      "leftToRepay": 40500,
+      "duration": "8 Months",
+      "interestRate": "12%",
+      "installment": 2000
+    },
+    {
+      "amount": 500000,
+      "leftToRepay": 250000,
+      "duration": "36 Months",
+      "interestRate": "10%",
+      "installment": 8000
+    },
+    {
+      "amount": 900000,
+      "leftToRepay": 40500,
+      "duration": "12 Months",
+      "interestRate": "12%",
+      "installment": 5000
+    },
+    {
+      "amount": 50000,
+      "leftToRepay": 40500,
+      "duration": "25 Months",
+      "interestRate": "5%",
+      "installment": 2000
+    },
+    {
+      "amount": 50000,
+      "leftToRepay": 40500,
+      "duration": "5 Months",
+      "interestRate": "16%",
+      "installment": 10000
+    },
+    {
+      "amount": 80000,
+      "leftToRepay": 25500,
+      "duration": "14 Months",
+      "interestRate": "8%",
+      "installment": 2000
+    },
+    {
+      "amount": 12000,
+      "leftToRepay": 5500,
+      "duration": "9 Months",
+      "interestRate": "13%",
+      "installment": 500
+    },
+    {
+      "amount": 160000,
+      "leftToRepay": 100800,
+      "duration": "3 Months",
+      "interestRate": "12%",
+      "installment": 900
+    }
+  ],
+
+  "bank-services": [
+    {
+      "service": "Business loans",
+      "description": "It is a long established text"
+    },
+    {
+      "service": "Checking accounts",
+      "description": "It is a long established text"
+    },
+    {
+      "service": "Debit and credit cards",
+      "description": "It is a long established text"
+    },
+    {
+      "service": "Life Insurance",
+      "description": "It is a long established text"
+    },
+    {
+      "service": "Savings accounts",
+      "description": "It is a long established text"
+    }
+  ]
+}

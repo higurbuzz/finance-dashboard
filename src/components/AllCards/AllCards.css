@@ -1,0 +1,22 @@
+.all-cards {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 991px) {
+  .cards {
+    overflow: scroll;
+    width: calc(100vw - 40px);
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+  }
+  .cards::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+}
