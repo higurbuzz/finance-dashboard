@@ -1,0 +1,93 @@
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 50px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  border-radius: 0px;
+  font-size: 16px;
+  padding: 10px;
+  cursor: pointer;
+  color: var(--light-blue);
+  border-bottom: 3px solid transparent;
+}
+
+.tabs button:hover {
+  background: none;
+  color: var(--sidebar-active);
+}
+
+.tabs .active {
+  color: var(--sidebar-active);
+  border-color: var(--sidebar-active);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  font-weight: 500;
+  color: var(--light-blue);
+}
+
+td {
+  border-top: 1px solid var(--border);
+}
+
+.income {
+  color: #28a745;
+}
+
+.expense {
+  color: #dc3545;
+}
+
+table button {
+  background: none;
+  font-size: 15px;
+  color: var(--button);
+  border: 1px solid var(--button);
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+table button:hover {
+  color: white;
+  background: #0056b3;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-top: 30px;
+}
+
+.page-numbers button,
+.pagination button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  cursor: pointer;
+  color: #1814f3;
+}
+
+.page-numbers .active {
+  background-color: #1814f3;
+  border-radius: 10px;
+  color: white;
+}

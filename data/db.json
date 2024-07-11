@@ -50,149 +50,17 @@
       "textColor": "#FFFFFF",
       "labelColor": "rgba(255, 255, 255, 0.7)",
       "isColored": true
-    }
-  ],
-  "weekly-activity": [
-    {
-      "day": "Sat",
-      "deposit": 500,
-      "withdraw": 300,
-      "id": "5e9e"
     },
     {
-      "day": "Sun",
-      "deposit": 400,
-      "withdraw": 200,
-      "id": "a3be"
-    },
-    {
-      "day": "Mon",
-      "deposit": 300,
-      "withdraw": 100,
-      "id": "e1a3"
-    },
-    {
-      "day": "Tue",
-      "deposit": 200,
-      "withdraw": 0,
-      "id": "31de"
-    },
-    {
-      "day": "Wed",
-      "deposit": 100,
-      "withdraw": 0,
-      "id": "c9e2"
-    },
-    {
-      "day": "Thu",
-      "deposit": 0,
-      "withdraw": 0,
-      "id": "4c1c"
-    },
-    {
-      "day": "Fri",
-      "deposit": 0,
-      "withdraw": 0,
-      "id": "7c48"
-    }
-  ],
-  "expense-statistics": [
-    {
-      "category": "Entertainment",
-      "percentage": 30,
-      "id": "8ae2"
-    },
-    {
-      "category": "Investment",
-      "percentage": 20,
-      "id": "3deb"
-    },
-    {
-      "category": "Bill Expense",
-      "percentage": 15,
-      "id": "6a42"
-    },
-    {
-      "category": "Others",
-      "percentage": 35,
-      "id": "4b0e"
-    }
-  ],
-  "recent-transactions": [
-    {
-      "description": "Deposit Paypal",
-      "date": "25 January 2021",
-      "amount": 2500,
-      "type": "deposit",
-      "id": "7e71"
-    },
-    {
-      "description": "Deposit from my Card",
-      "date": "28 January 2021",
-      "amount": -850,
-      "type": "withdraw",
-      "id": "a255"
-    },
-    {
-      "description": "Jemi Wilson",
-      "date": "21 January 2021",
-      "amount": 5400,
-      "type": "deposit",
-      "id": "a137"
-    }
-  ],
-  "quick-transfer": [
-    {
-      "name": "Workman",
-      "role": "Designer",
-      "id": "a695"
-    },
-    {
-      "name": "Livia Bator",
-      "role": "CEO",
-      "id": "9ac5"
-    },
-    {
-      "name": "Randy Press",
-      "role": "Director",
-      "id": "26d8"
-    }
-  ],
-  "balance-history": [
-    {
-      "month": "Jul",
-      "balance": 0,
-      "id": "5bcd"
-    },
-    {
-      "month": "Aug",
-      "balance": 200,
-      "id": "c837"
-    },
-    {
-      "month": "Sep",
-      "balance": 400,
-      "id": "2c29"
-    },
-    {
-      "month": "Oct",
-      "balance": 600,
-      "id": "f978"
-    },
-    {
-      "month": "Nov",
-      "balance": 800,
-      "id": "b2b7"
-    },
-    {
-      "month": "Dec",
+      "id": "5e88",
       "balance": 1000,
-      "id": "f188"
-    },
-    {
-      "month": "Jan",
-      "balance": 1200,
-      "id": "b6a7"
+      "cardHolder": "hhjghjghj",
+      "validThru": "2024-08",
+      "cardNumber": "4545 4545 3534 3434",
+      "background": "linear-gradient(120deg, rgba(76,73,237,1) 0%, rgba(10,6,244,1) 100%)",
+      "textColor": "#FFFFFF",
+      "labelColor": "rgba(255, 255, 255, 0.7)",
+      "isColored": true
     }
   ],
   "all-transactions": [
@@ -201,7 +69,8 @@
       "category": "Shopping",
       "card": "1234 ****",
       "date": "28 Jan, 12.30 AM",
-      "amount": -2500,
+      "amount": 2500,
+      "isIncome": false,
       "transactionID": "12548796",
       "id": "0d72"
     },
@@ -211,6 +80,7 @@
       "card": "1234 ****",
       "date": "25 Jan, 10.40 PM",
       "amount": 750,
+      "isIncome": true,
       "transactionID": "12548796",
       "id": "cc37"
     },
@@ -219,7 +89,8 @@
       "category": "Service",
       "card": "1234 ****",
       "date": "20 Jan, 10.40 PM",
-      "amount": -150,
+      "amount": 150,
+      "isIncome": false,
       "transactionID": "12548796",
       "id": "7669"
     },
@@ -228,7 +99,8 @@
       "category": "Transfer",
       "card": "1234 ****",
       "date": "15 Jan, 03.29 PM",
-      "amount": -1050,
+      "amount": 1050,
+      "isIncome": false,
       "transactionID": "12548796",
       "id": "8f34"
     },
@@ -238,111 +110,9 @@
       "card": "1234 ****",
       "date": "14 Jan, 10.40 PM",
       "amount": 840,
+      "isIncome": true,
       "transactionID": "12548796",
       "id": "8cd0"
-    }
-  ],
-  "card-settings": {
-    "actions": [
-      "Change Pin Code",
-      "Add to Google Pay",
-      "Withdraw without any card",
-      "Block Card",
-      "Add to Apple Pay",
-      "Add to Apple Store"
-    ]
-  },
-  "loans": [
-    {
-      "amount": 100000,
-      "leftToRepay": 40500,
-      "duration": "8 Months",
-      "interestRate": "12%",
-      "installment": 2000,
-      "id": "966d"
-    },
-    {
-      "amount": 500000,
-      "leftToRepay": 250000,
-      "duration": "36 Months",
-      "interestRate": "10%",
-      "installment": 8000,
-      "id": "66cd"
-    },
-    {
-      "amount": 900000,
-      "leftToRepay": 40500,
-      "duration": "12 Months",
-      "interestRate": "12%",
-      "installment": 5000,
-      "id": "fd78"
-    },
-    {
-      "amount": 50000,
-      "leftToRepay": 40500,
-      "duration": "25 Months",
-      "interestRate": "5%",
-      "installment": 2000,
-      "id": "b79d"
-    },
-    {
-      "amount": 50000,
-      "leftToRepay": 40500,
-      "duration": "5 Months",
-      "interestRate": "16%",
-      "installment": 10000,
-      "id": "128f"
-    },
-    {
-      "amount": 80000,
-      "leftToRepay": 25500,
-      "duration": "14 Months",
-      "interestRate": "8%",
-      "installment": 2000,
-      "id": "5748"
-    },
-    {
-      "amount": 12000,
-      "leftToRepay": 5500,
-      "duration": "9 Months",
-      "interestRate": "13%",
-      "installment": 500,
-      "id": "b154"
-    },
-    {
-      "amount": 160000,
-      "leftToRepay": 100800,
-      "duration": "3 Months",
-      "interestRate": "12%",
-      "installment": 900,
-      "id": "225b"
-    }
-  ],
-  "bank-services": [
-    {
-      "service": "Business loans",
-      "description": "It is a long established text",
-      "id": "4b36"
-    },
-    {
-      "service": "Checking accounts",
-      "description": "It is a long established text",
-      "id": "fe42"
-    },
-    {
-      "service": "Debit and credit cards",
-      "description": "It is a long established text",
-      "id": "99d7"
-    },
-    {
-      "service": "Life Insurance",
-      "description": "It is a long established text",
-      "id": "55af"
-    },
-    {
-      "service": "Savings accounts",
-      "description": "It is a long established text",
-      "id": "70c1"
     }
   ]
 }

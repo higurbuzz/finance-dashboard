@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const menuItems = [
     { text: "Dashboard", icon: "../../assets/home.svg", link: "/" },
-    { text: "Transactions", icon: "../../assets/transactions.svg", link: "/#" },
+    {
+      text: "Transactions",
+      icon: "../../assets/transactions.svg",
+      link: "/transactions",
+    },
     { text: "Accounts", icon: "../../assets/accounts.svg", link: "/#" },
     { text: "Investments", icon: "../../assets/investments.svg", link: "/#" },
     {

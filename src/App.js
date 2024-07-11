@@ -10,6 +10,7 @@ import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import CreditCards from "./pages/CreditCards";
+import Transactions from "./pages/Transactions";
 
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -20,6 +21,7 @@ const App = () => {
     const pathToTitle = {
       "/": "Overview",
       "/credit-cards": "Credit Cards",
+      "/transactions": "Transactions",
     };
 
     setHeaderTitle(pathToTitle[location.pathname] || "Overview");
@@ -41,6 +43,9 @@ const App = () => {
             </Route>
             <Route exact path="/credit-cards">
               <CreditCards />
+            </Route>
+            <Route exact path="/transactions">
+              <Transactions />
             </Route>
           </Switch>
         </div>
