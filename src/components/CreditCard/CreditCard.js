@@ -5,10 +5,15 @@ const CreditCard = ({ item }) => {
     return number.slice(0, 4) + " **** **** " + number.slice(-4);
   };
 
+  const formatValidThru = (date) => {
+    const [year, month] = date.split("-");
+    return `${month}/${year.slice(-2)}`;
+  };
+
   return (
     <div
       className="credit-card"
-      style={item.isColored && { color: "white", background: item.background }}
+      style={{ color: item.textColor, background: item.background }}
     >
       <div className="card-balance">
         <span style={{ color: item.labelColor }}>Balance</span>
@@ -21,7 +26,7 @@ const CreditCard = ({ item }) => {
         </div>
         <div className="card-details">
           <span style={{ color: item.labelColor }}>VALID THRU</span>
-          <h4>{item.validThru}</h4>
+          <h4>{formatValidThru(item.validThru)}</h4>
         </div>
         <div></div>
       </div>

@@ -147,7 +147,7 @@ const AddCard = () => {
             <div>
               <label>Expiration Date</label>
               <input
-                type="date"
+                type="month"
                 required
                 placeholder="25 January 2025"
                 value={validThru}
