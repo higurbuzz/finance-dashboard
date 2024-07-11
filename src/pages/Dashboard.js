@@ -1,5 +1,5 @@
 import "./Pages.css";
-import MyCards from "../components/AllCards/AllCards";
+import AllCards from "../components/AllCards/AllCards";
 import RecentTransactions from "../components/RecentTransactions/RecentTransactions";
 import WeeklyActivity from "../components/WeeklyActivity/WeeklyActivity";
 import ExpenseStatistics from "../components/ExpenseStatistics/ExpenseStatistics";
@@ -11,7 +11,7 @@ const Dashboard = () => {
     <div className="page-container">
       <div className="page-row">
         <div className="page-column" style={{ flexGrow: "2" }}>
-          <MyCards
+          <AllCards
             maxCardNumber="2"
             boxTitle="My Cards"
             link="/credit-cards"

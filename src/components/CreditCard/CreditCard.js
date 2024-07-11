@@ -1,6 +1,10 @@
 import "./CreditCard.css";
 
 const CreditCard = ({ item }) => {
+  const maskCardNumber = (number) => {
+    return number.slice(0, 4) + " **** **** " + number.slice(-4);
+  };
+
   return (
     <div
       className="credit-card"
@@ -26,7 +30,7 @@ const CreditCard = ({ item }) => {
       ) : (
         <div className="card-bottom" />
       )}
-      <div className="card-number">{item.cardNumber}</div>
+      <div className="card-number">{maskCardNumber(item.cardNumber)}</div>
       <div className="card-chip">
         {item.isColored ? (
           <img src="../../assets/card-chip.svg" alt="Chip" />

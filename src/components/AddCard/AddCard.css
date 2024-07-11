@@ -17,7 +17,8 @@
   color: #232323;
 }
 
-.card-form input {
+.card-form input,
+select {
   color: #718ebf;
   font-size: 15px;
   padding: 15px;
@@ -31,7 +32,7 @@
   font-size: 15px;
 }
 
-.add-card-button {
+.card-form button {
   background: #1814f3;
   font-size: 16px;
   font-weight: 500;

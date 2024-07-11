@@ -7,10 +7,12 @@
 .cards {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 991px) {
   .cards {
+    flex-wrap: nowrap;
     overflow: scroll;
     width: calc(100vw - 40px);
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
