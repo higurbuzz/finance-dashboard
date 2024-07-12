@@ -2,8 +2,11 @@ import "./AllTransactions.css";
 import BoxTitle from "../BoxTitle/BoxTitle";
 import Box from "../Box/Box";
 import useFetch from "../../hooks/useFetch";
+import { useTranslation } from "react-i18next";
 
 const AllTransactions = () => {
+  const { t } = useTranslation();
+
   const {
     data: allTrans,
     isLoading,
@@ -12,28 +15,28 @@ const AllTransactions = () => {
 
   return (
     <>
-      <BoxTitle title="Recent Transactions" />
+      <BoxTitle title={t("recent_transactions")} />
       <div className="tabs">
-        <button className="active">All Transactions</button>
-        <button>Income</button>
-        <button>Expense</button>
+        <button className="active">{t("all_transactions")}</button>
+        <button>{t("income")}</button>
+        <button>{t("expense")}</button>
       </div>
       <Box>
         <table>
           <thead>
             <tr>
-              <th>Description</th>
-              <th>Transaction ID</th>
-              <th>Type</th>
-              <th>Card</th>
-              <th>Date</th>
-              <th>Amount</th>
-              <th>Receipt</th>
+              <th>{t("description")}</th>
+              <th>{t("transaction_id")}</th>
+              <th>{t("type")}</th>
+              <th>{t("card")}</th>
+              <th>{t("date")}</th>
+              <th>{t("amount")}</th>
+              <th>{t("receipt")}</th>
             </tr>
           </thead>
           <tbody>
             {error && <div>{error}</div>}
-            {isLoading && <div>Loading...</div>}
+            {isLoading && <div>{t("loading")}</div>}
             {allTrans &&
               allTrans.map((transaction, index) => (
                 <tr key={index}>
@@ -46,7 +49,7 @@ const AllTransactions = () => {
                     {transaction.isIncome ? "+" : "-"}${transaction.amount}
                   </td>
                   <td>
-                    <button>Download</button>
+                    <button>{t("download")}</button>
                   </td>
                 </tr>
               ))}
@@ -54,14 +57,14 @@ const AllTransactions = () => {
         </table>
       </Box>
       <div className="pagination">
-        <button>&lt; Previous</button>
+        <button>&lt; {t("previous")}</button>
         <span className="page-numbers">
           <button className="active">1</button>
           <button>2</button>
           <button>3</button>
           <button>4</button>
         </span>
-        <button>Next &gt;</button>
+        <button>{t("next")} &gt;</button>
       </div>
     </>
   );

@@ -1,6 +1,9 @@
 import "./SearchBar.css";
+import { useTranslation } from "react-i18next";
 
 const SearchBar = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="search-bar">
       <img
@@ -10,7 +13,7 @@ const SearchBar = () => {
       />
       <input
         type="text"
-        placeholder="Search for something"
+        placeholder={t("search_for_something")}
         className="search-input"
       />
     </div>

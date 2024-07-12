@@ -2,8 +2,11 @@ import "./AllCards.css";
 import BoxTitle from "../BoxTitle/BoxTitle";
 import CreditCard from "../CreditCard/CreditCard";
 import useFetch from "../../hooks/useFetch";
+import { useTranslation } from "react-i18next";
 
 const AllCards = ({ maxCardNumber, boxTitle, link, linkText }) => {
+  const { t } = useTranslation();
+
   const {
     data: allCards,
     isLoading,
@@ -15,7 +18,7 @@ const AllCards = ({ maxCardNumber, boxTitle, link, linkText }) => {
       <BoxTitle title={boxTitle} link={link} linkText={linkText} />
       <div className="cards">
         {error && <div>{error}</div>}
-        {isLoading && <div>Loading...</div>}
+        {isLoading && <div>{t("loading")}</div>}
         {allCards &&
           allCards
             .slice(0, maxCardNumber)

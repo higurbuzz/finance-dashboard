@@ -9,20 +9,23 @@ import {
 } from "recharts";
 import Box from "../Box/Box";
 import BoxTitle from "../BoxTitle/BoxTitle";
-
-const data = [
-  { name: "Entertainment", value: 30 },
-  { name: "Bill Expense", value: 15 },
-  { name: "Investment", value: 20 },
-  { name: "Others", value: 35 },
-];
+import { useTranslation } from "react-i18next";
 
 const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 
 const ExpenseStatistics = () => {
+  const { t } = useTranslation();
+
+  const data = [
+    { name: t("entertainment"), value: 30 },
+    { name: t("bill_expense"), value: 15 },
+    { name: t("investment"), value: 20 },
+    { name: t("others"), value: 35 },
+  ];
+
   return (
     <div>
-      <BoxTitle title="Expense Statistics" />
+      <BoxTitle title={t("expense_statistics")} />
       <Box>
         <ResponsiveContainer width="100%" height={300}>
           <PieChart>

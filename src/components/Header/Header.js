@@ -1,5 +1,6 @@
 import SearchBar from "../SearchBar/SearchBar";
 import "./Header.css";
+import LanguageSwitcher from "../LanguageSwıtcher/LanguageSwitcher";
 
 const Header = ({ title, toggleSidebar }) => {
   return (
@@ -16,6 +17,7 @@ const Header = ({ title, toggleSidebar }) => {
         <div className="header-icon">
           <img src="../../assets/notification.svg" />
         </div>
+        <LanguageSwitcher />
         <img
           className="header-profile-picture"
           src="../../assets/profile-picture.png"

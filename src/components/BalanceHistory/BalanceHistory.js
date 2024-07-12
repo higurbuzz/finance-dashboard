@@ -10,21 +10,24 @@ import {
 } from "recharts";
 import BoxTitle from "../BoxTitle/BoxTitle";
 import Box from "../Box/Box";
-
-const data = [
-  { name: "Jul", uv: 100 },
-  { name: "Aug", uv: 700 },
-  { name: "Sep", uv: 500 },
-  { name: "Oct", uv: 800 },
-  { name: "Nov", uv: 200 },
-  { name: "Dec", uv: 600 },
-  { name: "Jan", uv: 220 },
-];
+import { useTranslation } from "react-i18next";
 
 const BalanceHistory = () => {
+  const { t } = useTranslation();
+
+  const data = [
+    { name: t("jul"), uv: 100 },
+    { name: t("aug"), uv: 700 },
+    { name: t("sep"), uv: 500 },
+    { name: t("oct"), uv: 800 },
+    { name: t("nov"), uv: 200 },
+    { name: t("dec"), uv: 600 },
+    { name: t("jan"), uv: 220 },
+  ];
+
   return (
     <div className="balance-history">
-      <BoxTitle title="Balance History" />
+      <BoxTitle title={t("balance_history")} />
       <Box>
         <ResponsiveContainer width="100%" height={226}>
           <LineChart data={data}>

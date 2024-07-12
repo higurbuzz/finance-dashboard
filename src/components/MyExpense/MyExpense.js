@@ -2,20 +2,23 @@ import React from "react";
 import Box from "../Box/Box";
 import BoxTitle from "../BoxTitle/BoxTitle";
 import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer } from "recharts";
-
-const data = [
-  { name: "Aug", Amount: 8000 },
-  { name: "Sep", Amount: 13000 },
-  { name: "Oct", Amount: 9000 },
-  { name: "Now", Amount: 5000 },
-  { name: "Dec", Amount: 12500 },
-  { name: "Jan", Amount: 8000 },
-];
+import { useTranslation } from "react-i18next";
 
 const MyExpense = () => {
+  const { t } = useTranslation();
+
+  const data = [
+    { name: t("aug"), Amount: 8000 },
+    { name: t("sep"), Amount: 13000 },
+    { name: t("oct"), Amount: 9000 },
+    { name: t("nov"), Amount: 5000 },
+    { name: t("dec"), Amount: 12500 },
+    { name: t("jan"), Amount: 8000 },
+  ];
+
   return (
     <div>
-      <BoxTitle title="My Expense" />
+      <BoxTitle title={t("my_expense")} />
       <Box>
         <ResponsiveContainer width="100%" height={175}>
           <BarChart data={data}>

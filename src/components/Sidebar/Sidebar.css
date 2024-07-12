@@ -1,5 +1,5 @@
 .sidebar {
-  min-width: 250px;
+  width: 275px;
   background-color: var(--sidebar-bg);
   border-right: 1px solid var(--border);
   color: var(--sidebar-normal);

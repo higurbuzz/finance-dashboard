@@ -11,21 +11,24 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
-
-const data = [
-  { name: "Sat", Deposit: 400, Withdraw: 240 },
-  { name: "Sun", Deposit: 300, Withdraw: 139 },
-  { name: "Mon", Deposit: 200, Withdraw: 480 },
-  { name: "Tue", Deposit: 278, Withdraw: 390 },
-  { name: "Wed", Deposit: 189, Withdraw: 480 },
-  { name: "Thu", Deposit: 239, Withdraw: 380 },
-  { name: "Fri", Deposit: 349, Withdraw: 430 },
-];
+import { useTranslation } from "react-i18next";
 
 const WeeklyActivity = () => {
+  const { t } = useTranslation();
+
+  const data = [
+    { name: t("sat"), Deposit: 400, Withdraw: 240 },
+    { name: t("sun"), Deposit: 300, Withdraw: 139 },
+    { name: t("mon"), Deposit: 200, Withdraw: 480 },
+    { name: t("tue"), Deposit: 278, Withdraw: 390 },
+    { name: t("wed"), Deposit: 189, Withdraw: 480 },
+    { name: t("thu"), Deposit: 239, Withdraw: 380 },
+    { name: t("fri"), Deposit: 349, Withdraw: 430 },
+  ];
+
   return (
     <div>
-      <BoxTitle title="Weekly Activity" />
+      <BoxTitle title={t("weekly_activity")} />
       <Box>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart
@@ -37,8 +40,8 @@ const WeeklyActivity = () => {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Bar dataKey="Deposit" fill="#8884d8" />
-            <Bar dataKey="Withdraw" fill="#82ca9d" />
+            <Bar dataKey="Deposit" name={t("deposit")} fill="#8884d8" />
+            <Bar dataKey="Withdraw" name={t("withdraw")} fill="#82ca9d" />
           </BarChart>
         </ResponsiveContainer>
       </Box>

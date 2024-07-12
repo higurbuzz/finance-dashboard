@@ -1,8 +1,11 @@
 import "./RecentTransaction.css";
 import BoxTitle from "../BoxTitle/BoxTitle";
 import Box from "../Box/Box";
+import { useTranslation } from "react-i18next";
 
 const RecentTransactions = () => {
+  const { t } = useTranslation();
+
   const transactions = [
     {
       icon: "../../assets/credit-cards-1.svg",
@@ -32,7 +35,7 @@ const RecentTransactions = () => {
 
   return (
     <div className="recent-transactions">
-      <BoxTitle title="Recent Transactions" />
+      <BoxTitle title={t("recent_transactions")} />
       <Box>
         <div className="transactions">
           {transactions.map((transaction, index) => (

@@ -1,6 +1,9 @@
 import "./CreditCard.css";
+import { useTranslation } from "react-i18next";
 
 const CreditCard = ({ item }) => {
+  const { t } = useTranslation();
+
   const maskCardNumber = (number) => {
     return number.slice(0, 4) + " **** **** " + number.slice(-4);
   };
@@ -16,16 +19,16 @@ const CreditCard = ({ item }) => {
       style={{ color: item.textColor, background: item.background }}
     >
       <div className="card-balance">
-        <span style={{ color: item.labelColor }}>Balance</span>
+        <span style={{ color: item.labelColor }}>{t("balance")}</span>
         <h3>${item.balance}</h3>
       </div>
       <div className="card-details-row">
         <div className="card-details">
-          <span style={{ color: item.labelColor }}>CARD HOLDER</span>
+          <span style={{ color: item.labelColor }}>{t("card_holder")}</span>
           <h4>{item.cardHolder}</h4>
         </div>
         <div className="card-details">
-          <span style={{ color: item.labelColor }}>VALID THRU</span>
+          <span style={{ color: item.labelColor }}>{t("valid_thru")}</span>
           <h4>{formatValidThru(item.validThru)}</h4>
         </div>
         <div></div>

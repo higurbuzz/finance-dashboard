@@ -2,8 +2,11 @@ import "./QuickTransfer.css";
 import React, { useState } from "react";
 import Box from "../Box/Box";
 import BoxTitle from "../BoxTitle/BoxTitle";
+import { useTranslation } from "react-i18next";
 
 const QuickTransfer = () => {
+  const { t } = useTranslation();
+
   const [amount, setAmount] = useState("");
 
   const handleAmountChange = (e) => {
@@ -16,7 +19,7 @@ const QuickTransfer = () => {
 
   return (
     <div className="quick-transfer">
-      <BoxTitle title="Quick Transfer" />
+      <BoxTitle title={t("quick_transfer")} />
       <Box>
         <div className="recipients">
           <div className="recipient">
@@ -48,7 +51,7 @@ const QuickTransfer = () => {
           </button>
         </div>
         <div className="transfer">
-          <div className="transfer-text">Write Amount</div>
+          <div className="transfer-text">{t("write_amount")}</div>
           <input
             type="number"
             value={amount}
@@ -56,8 +59,8 @@ const QuickTransfer = () => {
             placeholder="525.50"
           />
           <button onClick={handleSendClick} className="send-button">
-            Send
-            <img src="../../assets/send-icon.svg" alt="Send" />
+            {t("send")}
+            <img src="../../assets/send-icon.svg" alt={t("send")} />
           </button>
         </div>
       </Box>

@@ -2,8 +2,10 @@ import { useState } from "react";
 import Box from "../Box/Box";
 import BoxTitle from "../BoxTitle/BoxTitle";
 import "./AddCard.css";
+import { useTranslation } from "react-i18next";
 
 const AddCard = () => {
+  const { t } = useTranslation();
   const [cardType, setCardType] = useState("classic");
   const [cardHolder, setCardHolder] = useState("");
   const [cardNumber, setCardNumber] = useState("");
@@ -94,33 +96,28 @@ const AddCard = () => {
 
   return (
     <div>
-      <BoxTitle title="Add New Card" />
+      <BoxTitle title={t("add_new_card")} />
       <Box>
-        <p style={{ color: "#718EBF" }}>
-          Credit Card generally means a plastic card issued by Scheduled
-          Commercial Banks assigned to a Cardholder, with a credit limit, that
-          can be used to purchase goods and services on credit or obtain cash
-          advances.
-        </p>
+        <p style={{ color: "#718EBF" }}>{t("card_desc")}</p>
         <div className="card-form">
           <form onSubmit={handleSubmit}>
             <div>
-              <label>Card Type</label>
+              <label>{t("card_type")}</label>
               <select
                 required
                 value={cardType}
                 onChange={(e) => setCardType(e.target.value)}
               >
-                <option value="classic">Classic</option>
-                <option value="travel">Travel</option>
-                <option value="premium">Premium</option>
-                <option value="business">Business</option>
-                <option value="student">Student</option>
+                <option value="classic">{t("classic")}</option>
+                <option value="travel">{t("travel")}</option>
+                <option value="premium">{t("premium")}</option>
+                <option value="business">{t("business")}</option>
+                <option value="student">{t("student")}</option>
               </select>
             </div>
 
             <div>
-              <label>Name On Card</label>
+              <label>{t("name_on_card")}</label>
               <input
                 type="text"
                 required
@@ -131,7 +128,7 @@ const AddCard = () => {
             </div>
 
             <div>
-              <label>Card Number</label>
+              <label>{t("card_number")}</label>
               <input
                 type="tel"
                 inputmode="numeric"
@@ -145,19 +142,18 @@ const AddCard = () => {
             </div>
 
             <div>
-              <label>Expiration Date</label>
+              <label>{t("expiration_date")}</label>
               <input
                 type="month"
                 required
-                placeholder="25 January 2025"
                 value={validThru}
                 onChange={(e) => setValidThru(e.target.value)}
               />
             </div>
 
             <div>
-              {!isPending && <button>Add Card</button>}
-              {isPending && <button disabled>Adding, Please Wait...</button>}
+              {!isPending && <button>{t("add_card")}</button>}
+              {isPending && <button disabled>{t("adding_wait")}</button>}
             </div>
           </form>
         </div>

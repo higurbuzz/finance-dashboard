@@ -5,7 +5,7 @@ import {
   Switch,
   useLocation,
 } from "react-router-dom";
-
+import { useTranslation } from "react-i18next";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Dashboard from "./pages/Dashboard";
@@ -13,18 +13,19 @@ import CreditCards from "./pages/CreditCards";
 import Transactions from "./pages/Transactions";
 
 const App = () => {
+  const { t } = useTranslation();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [headerTitle, setHeaderTitle] = useState("Overview");
   const location = useLocation();
 
   useEffect(() => {
     const pathToTitle = {
-      "/": "Overview",
-      "/credit-cards": "Credit Cards",
-      "/transactions": "Transactions",
+      "/": t("overview"),
+      "/credit-cards": t("credit_cards"),
+      "/transactions": t("transactions"),
     };
 
-    setHeaderTitle(pathToTitle[location.pathname] || "Overview");
+    setHeaderTitle(pathToTitle[location.pathname] || t("overview"));
   }, [location.pathname]);
 
   const toggleSidebar = () => {
