@@ -50,17 +50,6 @@
       "textColor": "#FFFFFF",
       "labelColor": "rgba(255, 255, 255, 0.7)",
       "isColored": true
-    },
-    {
-      "id": "5e88",
-      "balance": 1000,
-      "cardHolder": "hhjghjghj",
-      "validThru": "2024-08",
-      "cardNumber": "4545 4545 3534 3434",
-      "background": "linear-gradient(120deg, rgba(76,73,237,1) 0%, rgba(10,6,244,1) 100%)",
-      "textColor": "#FFFFFF",
-      "labelColor": "rgba(255, 255, 255, 0.7)",
-      "isColored": true
     }
   ],
   "all-transactions": [

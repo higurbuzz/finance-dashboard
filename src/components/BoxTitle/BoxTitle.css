@@ -4,16 +4,16 @@
   align-items: center;
   margin-bottom: 20px;
 }
-  
+
 .box-title h2 {
-  color: var(--title);
+  color: var(--box-title);
   font-weight: 600;
   font-size: 22px;
   margin: 0;
 }
-  
+
 .box-title a {
-  color: var(--title);
+  color: var(--box-title);
   font-size: 17px;
   font-weight: 600;
   text-decoration: none;

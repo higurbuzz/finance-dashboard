@@ -18,12 +18,12 @@
 
 .tabs button:hover {
   background: none;
-  color: var(--sidebar-active);
+  color: var(--button-bg);
 }
 
 .tabs .active {
-  color: var(--sidebar-active);
-  border-color: var(--sidebar-active);
+  color: var(--button-bg);
+  border-color: var(--button-bg);
 }
 
 table {
@@ -47,26 +47,26 @@ td {
 }
 
 .income {
-  color: #28a745;
+  color: var(--income);
 }
 
 .expense {
-  color: #dc3545;
+  color: var(--expense);
 }
 
 table button {
   background: none;
   font-size: 15px;
-  color: var(--button);
-  border: 1px solid var(--button);
+  color: var(--button-bg);
+  border: 1px solid var(--button-bg);
   padding: 10px 20px;
   border-radius: 30px;
   cursor: pointer;
 }
 
 table button:hover {
-  color: white;
-  background: #0056b3;
+  color: var(--button-text);
+  background: var(--button-bg);
 }
 
 .pagination {
@@ -83,11 +83,11 @@ table button:hover {
   font-size: 16px;
   padding: 10px 15px;
   cursor: pointer;
-  color: #1814f3;
+  color: var(--button-bg);
 }
 
 .page-numbers .active {
-  background-color: #1814f3;
+  background-color: var(--button-bg);
   border-radius: 10px;
-  color: white;
+  color: var(--button-text);
 }

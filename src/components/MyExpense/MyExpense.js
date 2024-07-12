@@ -24,7 +24,12 @@ const MyExpense = () => {
           <BarChart data={data}>
             <XAxis dataKey="name" axisLine={false} tickLine={false} />
             <Tooltip
-              contentStyle={{ border: "none", background: "none" }}
+              labelStyle={{ color: "red" }}
+              contentStyle={{
+                border: "none",
+                borderRadius: "10px",
+                background: "white",
+              }}
               itemStyle={{ color: "#000" }}
               cursor={{ fill: "transparent" }}
             />

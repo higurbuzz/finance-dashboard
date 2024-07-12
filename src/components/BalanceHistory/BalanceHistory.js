@@ -38,9 +38,9 @@ const BalanceHistory = () => {
             <Line
               type="monotone"
               dataKey="uv"
-              stroke="#0000FF"
-              fill="#0000FF"
-              fillOpacity={0.3}
+              stroke="#718ebf"
+              strokeWidth="2"
+              fill="#718ebf"
             />
           </LineChart>
         </ResponsiveContainer>

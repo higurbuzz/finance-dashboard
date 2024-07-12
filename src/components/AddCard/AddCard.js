@@ -98,7 +98,7 @@ const AddCard = () => {
     <div>
       <BoxTitle title={t("add_new_card")} />
       <Box>
-        <p style={{ color: "#718EBF" }}>{t("card_desc")}</p>
+        <p>{t("card_desc")}</p>
         <div className="card-form">
           <form onSubmit={handleSubmit}>
             <div>

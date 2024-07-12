@@ -14,12 +14,11 @@
   margin: 0px 0px 10px 0px;
   font-size: 16px;
   font-weight: 500;
-  color: #232323;
 }
 
 .card-form input,
 select {
-  color: #718ebf;
+  color: var(--light-blue);
   font-size: 15px;
   padding: 15px;
   border-radius: 15px;
@@ -28,15 +27,15 @@ select {
 }
 
 .card-form input::placeholder {
-  color: #718ebf;
+  color: var(--light-blue);
   font-size: 15px;
 }
 
 .card-form button {
-  background: #1814f3;
+  background: var(--button-bg);
+  color: var(--button-text);
   font-size: 16px;
   font-weight: 500;
-  color: #fff;
   border: none;
   border-radius: 9px;
   height: 50px;

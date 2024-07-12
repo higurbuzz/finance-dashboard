@@ -1,22 +1,20 @@
 :root {
-  --title: #343c6a;
-  --bg-color: #f5f7fa;
+  --text: #232323;
+  --background: #f5f7fa;
   --border: #e6eff5;
+
+  --logo-text: #343c6a;
   --sidebar-bg: #fff;
   --sidebar-active: #2d60ff;
   --sidebar-normal: #b1b1b1;
-  --heading: #343c6a;
-  --light-blue: #718ebf;
 
-  --primary: #feaa09;
-  --primary2: #343c6a;
-  --primary3: #2d60ff;
-  --secondary: #fe5c73;
+  --light-blue: #718ebf;
 
   --expense: #ff4b4a;
   --income: #41d4a8;
 
-  --button: #123288;
+  --button-bg: #1814f3;
+  --button-text: #ffffff;
   --dark-blue-grad: linear-gradient(#123288, #295eec);
 
   --icon-green: #16dbcc;
@@ -27,13 +25,50 @@
   --icon-orange-bg: #fff5d9;
   --icon-red: #ff82ac;
   --icon-red-bg: #ffe0eb;
+
+  --box-title: #343c6a;
   --box-text: #232323;
+  --box-bg: white;
+}
+
+[data-theme="dark"] {
+  --text: #ffffff;
+  --background: #2b303b;
+  --border: #505661;
+
+  --logo-text: #ffffff;
+  --sidebar-bg: #23272f;
+  --sidebar-active: #9dccf7;
+  --sidebar-normal: #d7d7d7;
+
+  --light-blue: #718ebf;
+
+  --expense: #ff5656;
+  --income: #00f9ae;
+
+  --button-bg: #9dccf7;
+  --button-text: #232323;
+  --dark-blue-grad: linear-gradient(#123288, #295eec);
+
+  --icon-green: #16dbcc;
+  --icon-green-bg: #dcfaf8;
+  --icon-purple: #396aff;
+  --icon-purple-bg: #e7edff;
+  --icon-orange: #ffbb38;
+  --icon-orange-bg: #fff5d9;
+  --icon-red: #ff82ac;
+  --icon-red-bg: #ffe0eb;
+
+  --box-title: #ffffff;
+  --box-text: #ffffff;
+  --box-bg: #23272f;
 }
 
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg-color);
+  color: var(--text);
+  background-color: var(--background);
   font-family: "Inter";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
