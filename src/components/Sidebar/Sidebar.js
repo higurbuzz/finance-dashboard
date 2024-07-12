@@ -1,9 +1,10 @@
 import "./Sidebar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const { t } = useTranslation();
+  const location = useLocation();
 
   const menuItems = [
     {
@@ -19,12 +20,12 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     {
       text: t("accounts"),
       icon: "../../assets/accounts.svg",
-      link: "/",
+      link: "/accounts",
     },
     {
       text: t("investments"),
       icon: "../../assets/investments.svg",
-      link: "/",
+      link: "/investments",
     },
     {
       text: t("credit_cards"),
@@ -34,47 +35,53 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     {
       text: t("loans"),
       icon: "../../assets/loans.svg",
-      link: "/",
+      link: "/loans",
     },
     {
       text: t("services"),
       icon: "../../assets/services.svg",
-      link: "/",
+      link: "/services",
     },
     {
       text: t("my_privileges"),
       icon: "../../assets/my-privileges.svg",
-      link: "/",
+      link: "/privileges",
     },
     {
       text: t("setting"),
       icon: "../../assets/setting.svg",
-      link: "/",
+      link: "/setting",
     },
   ];
 
   return (
     <>
       <div className={`sidebar ${isOpen ? "open" : ""}`}>
-        <div className="sidebar-logo-section">
+        <Link className="logo-section" to="/">
           <img src="../../assets/bankdash.svg" alt="BankDash Logo" />
-          <h2 className="sidebar-logo-text">BankDash.</h2>
-        </div>
-        <ul className="sidebar-menu">
+          <h2 className="logo-text">BankDash.</h2>
+        </Link>
+
+        <ul className="menu">
           {menuItems.map((item, index) => (
-            <li className="sidebar-item" key={index}>
-              <img src={item.icon} alt={`${item.text} icon`} />
-              <Link className="sidebar-item-link" to={item.link}>
-                {item.text}
-              </Link>
-            </li>
+            <Link
+              className={`menu-item${
+                location.pathname === item.link ? " active" : ""
+              }`}
+              to={item.link}
+            >
+              <li key={index}>
+                <img src={item.icon} alt={`${item.text} icon`} />
+                <span>{item.text}</span>
+              </li>
+            </Link>
           ))}
-          <li className="sidebar-item sidebar-close-button">
-            <img src="../../assets/close.svg" alt="Close icon" />
-            <a className="sidebar-item-link" onClick={toggleSidebar}>
-              {t("close_menu")}
-            </a>
-          </li>
+          <a className="menu-item close-button" onClick={toggleSidebar}>
+            <li>
+              <img src="../../assets/close.svg" alt="Close icon" />
+              <span>{t("close_menu")}</span>
+            </li>
+          </a>
         </ul>
       </div>
       {isOpen && <div className="overlay" onClick={toggleSidebar}></div>}

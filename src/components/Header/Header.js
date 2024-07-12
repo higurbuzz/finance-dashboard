@@ -1,14 +1,31 @@
-import SearchBar from "../SearchBar/SearchBar";
 import "./Header.css";
+import SearchBar from "../SearchBar/SearchBar";
 import LanguageSwitcher from "../LanguageSwıtcher/LanguageSwitcher";
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import { useLocation } from "react-router-dom";
 
-const Header = ({ title, toggleSidebar }) => {
+const Header = ({ toggleSidebar }) => {
+  const [headerTitle, setHeaderTitle] = useState("Overview");
+  const { t } = useTranslation();
+  const location = useLocation();
+
+  useEffect(() => {
+    const pathToTitle = {
+      "/": t("overview"),
+      "/credit-cards": t("credit_cards"),
+      "/transactions": t("transactions"),
+    };
+
+    setHeaderTitle(pathToTitle[location.pathname] || t("page_not_found"));
+  }, [location.pathname, t]);
+
   return (
     <div className="header">
       <button className="sidebar-toggle-button" onClick={toggleSidebar}>
         ☰
       </button>
-      <h3 className="header-title">{title}</h3>
+      <h3 className="header-title">{headerTitle}</h3>
       <div className="header-right">
         <SearchBar />
         <div className="header-icon">
