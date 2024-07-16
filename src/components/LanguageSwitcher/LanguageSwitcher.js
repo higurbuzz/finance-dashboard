@@ -11,6 +11,10 @@ const LanguageSwitcher = () => {
     setIsOpen(false);
   };
 
+  const currentLanguage = i18n.language.includes("-")
+    ? i18n.language.split("-")[0]
+    : i18n.language;
+
   return (
     <div className="language-switcher">
       <button
@@ -19,7 +23,7 @@ const LanguageSwitcher = () => {
         onMouseLeave={() => setIsOpen(false)}
       >
         <img
-          src={`../../assets/lang-${i18n.language}.svg`}
+          src={`../../assets/lang-${currentLanguage}.svg`}
           alt="Current Language"
         />
       </button>

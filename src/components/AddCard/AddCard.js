@@ -131,8 +131,8 @@ const AddCard = () => {
               <label>{t("card_number")}</label>
               <input
                 type="tel"
-                inputmode="numeric"
-                maxlength="19"
+                inputMode="numeric"
+                maxLength="19"
                 minLength="16"
                 required
                 value={cardNumber}

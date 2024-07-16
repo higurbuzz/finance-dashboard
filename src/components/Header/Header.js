@@ -35,8 +35,8 @@ const Header = ({ toggleSidebar }) => {
         <div className="header-icon">
           <img src="../../assets/notification.svg" />
         </div>
-        <LanguageSwitcher />
         <ThemeSwitcher />
+        <LanguageSwitcher />
         <img
           className="header-profile-picture"
           src="../../assets/profile-picture.png"
