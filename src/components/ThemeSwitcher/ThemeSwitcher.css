@@ -22,9 +22,3 @@
   width: 30px;
   height: 30px;
 }
-
-@media (max-width: 991px) {
-  .theme-switcher {
-    display: none;
-  }
-}

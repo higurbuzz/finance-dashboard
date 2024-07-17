@@ -1,6 +1,8 @@
 import "./Sidebar.css";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const { t } = useTranslation();
@@ -83,6 +85,10 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             </li>
           </a>
         </ul>
+        <div className="sidebar-switchers">
+          <ThemeSwitcher />
+          <LanguageSwitcher />
+        </div>
       </div>
       {isOpen && <div className="overlay" onClick={toggleSidebar}></div>}
     </>

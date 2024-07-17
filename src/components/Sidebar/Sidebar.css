@@ -3,13 +3,16 @@
   background-color: var(--sidebar-bg);
   border-right: 1px solid var(--border);
   height: 100vh;
-  position: sticky;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
   top: 0;
   left: 0;
   overflow-y: scroll;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
   transition: transform 0.3s ease;
+  transform: translateX(-100%);
   z-index: 1000;
 }
 
@@ -23,15 +26,6 @@
 
 .app.sidebar-open .sidebar {
   transform: translateX(0);
-}
-
-@media (max-width: 991px) {
-  .sidebar {
-    position: fixed;
-    width: 250px;
-    height: 100%;
-    transform: translateX(-100%);
-  }
 }
 
 .logo-section {
@@ -60,6 +54,7 @@
   padding: 0px;
   margin: 0px;
   margin-top: 13px;
+  flex: 1;
 }
 
 .menu-item {
@@ -109,9 +104,21 @@
   z-index: 999;
 }
 
-@media (min-width: 992px) {
+.sidebar-switchers {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid var(--border);
+  padding: 10px;
+}
+
+@media (min-width: 1400px) {
   .close-button,
   .overlay {
     display: none;
+  }
+
+  .sidebar {
+    position: sticky;
+    transform: none;
   }
 }

@@ -1,7 +1,5 @@
 import "./Header.css";
 import SearchBar from "../SearchBar/SearchBar";
-import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
-import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
@@ -35,8 +33,6 @@ const Header = ({ toggleSidebar }) => {
         <div className="header-icon">
           <img src="../../assets/notification.svg" />
         </div>
-        <ThemeSwitcher />
-        <LanguageSwitcher />
         <img
           className="header-profile-picture"
           src="../../assets/profile-picture.png"
