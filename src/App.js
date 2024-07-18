@@ -5,19 +5,14 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Dashboard from "./pages/Dashboard";
 import CreditCards from "./pages/CreditCards";
 import Transactions from "./pages/Transactions";
+import { SidebarProvider } from "./contexts/SidebarContext";
 
 const App = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
   return (
-    <div className={`app ${isSidebarOpen ? "sidebar-open" : ""}`}>
-      <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+    <div className={"app"}>
+      <Sidebar />
       <div className="right-panel">
-        <Header toggleSidebar={toggleSidebar} />
+        <Header />
         <div className="content-container">
           <Switch>
             <Route exact path="/">
@@ -38,7 +33,9 @@ const App = () => {
 
 const AppWrapper = () => (
   <Router>
-    <App />
+    <SidebarProvider>
+      <App />
+    </SidebarProvider>
   </Router>
 );
 

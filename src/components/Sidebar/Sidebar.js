@@ -3,10 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import ThemeSwitcher from "../ThemeSwitcher/ThemeSwitcher";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher";
+import { useSidebar } from "../../contexts/SidebarContext";
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+const Sidebar = () => {
   const { t } = useTranslation();
   const location = useLocation();
+  const { state, toggleSidebar } = useSidebar();
 
   const menuItems = [
     {
@@ -58,7 +60,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
   return (
     <>
-      <div className={`sidebar ${isOpen ? "open" : ""}`}>
+      <div className={`sidebar ${state.isSidebarOpen ? "open" : ""}`}>
         <Link className="logo-section" to="/">
           <img src="../../assets/bankdash.svg" alt="BankDash Logo" />
           <h2 className="logo-text">BankDash.</h2>
@@ -71,6 +73,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 location.pathname === item.link ? " active" : ""
               }`}
               to={item.link}
+              key={index}
             >
               <li key={index}>
                 <img src={item.icon} alt={`${item.text} icon`} />
@@ -90,7 +93,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <LanguageSwitcher />
         </div>
       </div>
-      {isOpen && <div className="overlay" onClick={toggleSidebar}></div>}
+      {state.isSidebarOpen && (
+        <div className="overlay" onClick={toggleSidebar}></div>
+      )}
     </>
   );
 };

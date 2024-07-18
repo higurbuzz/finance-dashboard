@@ -1,9 +1,14 @@
+.recipients-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .recipients {
   display: flex;
-  align-items: center;
   margin-bottom: 20px;
-  justify-content: space-between;
-  width: 395px;
+  justify-content: space-around;
+  overflow-x: auto;
+  flex: 1;
 }
 
 .recipient {
@@ -34,11 +39,13 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0px;
+  padding-left: 20px;
 }
 
 .transfer {
   display: flex;
+  position: relative;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -66,6 +73,9 @@
 
 .send-button {
   display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
   background: #1814f3;
   font-size: 16px;
   font-weight: 500;

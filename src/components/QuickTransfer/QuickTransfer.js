@@ -21,31 +21,32 @@ const QuickTransfer = () => {
     <div className="quick-transfer">
       <BoxTitle title={t("quick_transfer")} />
       <Box>
-        <div className="recipients">
-          <div className="recipient">
-            <img src="../../assets/pp-livia.png" />
-            <div>
-              <div className="recipient-name">Livia Bator</div>
-              <div className="recipient-title">CEO</div>
+        <div className="recipients-container">
+          <div className="recipients">
+            <div className="recipient">
+              <img src="../../assets/pp-livia.png" />
+              <div>
+                <div className="recipient-name">Livia Bator</div>
+                <div className="recipient-title">CEO</div>
+              </div>
+            </div>
+
+            <div className="recipient">
+              <img src="../../assets/pp-randy.png" />
+              <div>
+                <div className="recipient-name">Randy Press</div>
+                <div className="recipient-title">Director</div>
+              </div>
+            </div>
+
+            <div className="recipient">
+              <img src="../../assets/pp-workman.png" />
+              <div>
+                <div className="recipient-name">Workman</div>
+                <div className="recipient-title">Designer</div>
+              </div>
             </div>
           </div>
-
-          <div className="recipient">
-            <img src="../../assets/pp-randy.png" />
-            <div>
-              <div className="recipient-name">Randy Press</div>
-              <div className="recipient-title">Director</div>
-            </div>
-          </div>
-
-          <div className="recipient">
-            <img src="../../assets/pp-workman.png" />
-            <div>
-              <div className="recipient-name">Workman</div>
-              <div className="recipient-title">Designer</div>
-            </div>
-          </div>
-
           <button className="next-button">
             <img src="../../assets/next-icon.svg" alt="Next" />
           </button>

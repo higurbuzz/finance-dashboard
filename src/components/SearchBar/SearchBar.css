@@ -1,5 +1,5 @@
 .search-bar {
-  display: flex;
+  display: none;
   align-items: center;
   background-color: var(--background);
   border-radius: 25px;
@@ -26,8 +26,8 @@
   color: var(--light-blue);
 }
 
-@media (max-width: 991px) {
+@media (min-width: 992px) {
   .search-bar {
-    display: none;
+    display: flex;
   }
 }

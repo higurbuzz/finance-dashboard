@@ -1,8 +1,8 @@
 .credit-card {
   box-sizing: border-box;
-  max-width: 350px;
-  min-width: 350px;
-  height: 225px;
+  width: 100%;
+  min-width: 265px;
+  max-width: 265px;
   font-family: "Lato";
   color: #343c6a;
   position: relative;
@@ -11,6 +11,7 @@
   background-color: white;
   padding: 25px;
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -22,13 +23,13 @@
 }
 
 .card-balance span {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--light-blue);
 }
 
 .card-balance h3 {
   margin: 0;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -44,19 +45,20 @@
 }
 
 .card-details span {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--light-blue);
 }
 
 .card-details h4 {
   margin: 0;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
 }
 
 .card-number {
-  margin-top: 20px;
-  font-size: 22px;
+  margin-top: 15px;
+  margin-bottom: -7px;
+  font-size: 16px;
   font-weight: 500;
   z-index: 1;
 }
@@ -69,19 +71,19 @@
 }
 
 .card-chip img {
-  width: 35px;
+  width: 27px;
   height: auto;
 }
 
 .card-logo {
   position: absolute;
   right: 25px;
-  bottom: 20px;
+  bottom: 15px;
   z-index: 1;
 }
 
 .card-logo img {
-  width: 44px;
+  width: 33px;
   height: auto;
 }
 
@@ -93,7 +95,7 @@
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   width: 100%;
-  height: 70px;
+  height: 50px;
   background-color: none;
 }
 
@@ -104,7 +106,7 @@
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   width: 100%;
-  height: 70px;
+  height: 50px;
   background-color: none;
   background: linear-gradient(
     180deg,
@@ -113,43 +115,46 @@
   );
 }
 
-@media (max-width: 576px) {
+@media (min-width: 1200px) {
   .credit-card {
-    max-width: 265px;
-    min-width: 265px;
-    height: 170px;
+    min-width: 365px;
+    max-width: 365px;
+    height: 235px;
   }
 
   .card-balance h3 {
-    font-size: 18px;
+    font-size: 24px;
+  }
+
+  .card-details span,
+  .card-balance span {
+    font-size: 12px;
+  }
+
+  .card-details h4 {
+    font-size: 16px;
   }
 
   .card-number {
-    margin-top: 15px;
-    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    font-size: 22px;
   }
 
   .card-bottom,
   .card-bottom-colored {
-    height: 50px;
-  }
-
-  .card-details-row,
-  .card-balance {
-    margin-bottom: 10px;
+    height: 70px;
   }
 
   .card-chip img {
-    width: 27px;
-    height: auto;
+    width: 35px;
   }
 
   .card-logo {
-    bottom: 15px;
+    bottom: 20px;
   }
 
   .card-logo img {
-    width: 33px;
-    height: auto;
+    width: 44px;
   }
 }

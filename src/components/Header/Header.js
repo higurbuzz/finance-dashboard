@@ -3,11 +3,13 @@ import SearchBar from "../SearchBar/SearchBar";
 import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useLocation } from "react-router-dom";
+import { useSidebar } from "../../contexts/SidebarContext";
 
-const Header = ({ toggleSidebar }) => {
+const Header = () => {
   const [headerTitle, setHeaderTitle] = useState("Overview");
   const { t } = useTranslation();
   const location = useLocation();
+  const { toggleSidebar } = useSidebar();
 
   useEffect(() => {
     const pathToTitle = {

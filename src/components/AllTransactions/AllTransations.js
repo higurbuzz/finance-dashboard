@@ -22,39 +22,41 @@ const AllTransactions = () => {
         <button>{t("expense")}</button>
       </div>
       <Box>
-        <table>
-          <thead>
-            <tr>
-              <th>{t("description")}</th>
-              <th>{t("transaction_id")}</th>
-              <th>{t("type")}</th>
-              <th>{t("card")}</th>
-              <th>{t("date")}</th>
-              <th>{t("amount")}</th>
-              <th>{t("receipt")}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {error && <div>{error}</div>}
-            {isLoading && <div>{t("loading")}</div>}
-            {allTrans &&
-              allTrans.map((transaction, index) => (
-                <tr key={index}>
-                  <td>{transaction.description}</td>
-                  <td>{transaction.transactionID}</td>
-                  <td>{transaction.category}</td>
-                  <td>{transaction.card}</td>
-                  <td>{transaction.date}</td>
-                  <td className={transaction.isIncome ? "income" : "expense"}>
-                    {transaction.isIncome ? "+" : "-"}${transaction.amount}
-                  </td>
-                  <td>
-                    <button>{t("download")}</button>
-                  </td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
+        <div style={{ overflowX: "auto" }}>
+          <table>
+            <thead>
+              <tr>
+                <th>{t("description")}</th>
+                <th>{t("transaction_id")}</th>
+                <th>{t("type")}</th>
+                <th>{t("card")}</th>
+                <th>{t("date")}</th>
+                <th>{t("amount")}</th>
+                <th>{t("receipt")}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {error && <div>{error}</div>}
+              {isLoading && <div>{t("loading")}</div>}
+              {allTrans &&
+                allTrans.map((transaction, index) => (
+                  <tr key={index}>
+                    <td>{transaction.description}</td>
+                    <td>{transaction.transactionID}</td>
+                    <td>{transaction.category}</td>
+                    <td>{transaction.card}</td>
+                    <td>{transaction.date}</td>
+                    <td className={transaction.isIncome ? "income" : "expense"}>
+                      {transaction.isIncome ? "+" : "-"}${transaction.amount}
+                    </td>
+                    <td>
+                      <button>{t("download")}</button>
+                    </td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
       </Box>
       <div className="pagination">
         <button>&lt; {t("previous")}</button>
